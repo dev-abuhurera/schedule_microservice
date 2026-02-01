@@ -21,8 +21,6 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
 
   await app.listen(process.env.PORT ?? 3000);
-  console.log('Server running on http://localhost:3000');
-  console.log('DATABASE_URL:', process.env.DATABASE_URL ? 'Loaded ' : 'NOT LOADED ');
 }
 
 bootstrap();
