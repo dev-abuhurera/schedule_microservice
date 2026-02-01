@@ -75,6 +75,8 @@ npx prisma generate
 ```bash
 npm run start:dev
 ```
+<img width="1920" height="1006" alt="image" src="https://github.com/user-attachments/assets/7d9bbbb5-7153-42b6-850e-20ba3f54f27e" />
+
 
 The server will start on `http://localhost:3000`
 
@@ -123,6 +125,9 @@ npm run test:cov
 | PATCH | `/jobs/:id` | Update a job |
 | DELETE | `/jobs/:id` | Delete a job |
 
+<img width="1920" height="1006" alt="image" src="https://github.com/user-attachments/assets/6e7625c0-408a-4dce-9de3-53ead70763ff" />
+
+
 ### Example: Create a Job
 ```bash
 curl -X POST http://localhost:3000/jobs \
@@ -134,6 +139,7 @@ curl -X POST http://localhost:3000/jobs \
     "isActive": true
   }'
 ```
+
 
 ### Cron Expression Examples
 
