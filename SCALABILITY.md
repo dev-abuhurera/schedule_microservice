@@ -62,7 +62,7 @@ Each module can be separated into individual services if needed.
 1. Deploy multiple NestJS instances
 2. Use NGINX/AWS ELB for load balancing
 3. PostgreSQL read replicas for read operations
-4. Redis for caching (optional)
+4. Redis for caching 
 
 **Code Changes Required:** None! ✅ (Stateless design)
 
@@ -215,28 +215,6 @@ this.executeJobAsync(job).catch(error => {
 - **Sentry** for error tracking
 - **New Relic/DataDog** for APM
 
-## Cost-Effective Scaling Path
-
-### Infrastructure Costs (AWS Example)
-
-**Phase 1: Single Instance** (~1K users)
-- EC2 t3.medium: $30/month
-- RDS PostgreSQL db.t3.small: $25/month
-- **Total: ~$55/month**
-
-**Phase 2: Load Balanced** (~5K users)
-- 3x EC2 t3.medium: $90/month
-- Application Load Balancer: $25/month
-- RDS PostgreSQL db.t3.medium + Read Replica: $80/month
-- **Total: ~$195/month**
-
-**Phase 3: Full Microservices** (10K+ users)
-- 6x EC2 instances: $180/month
-- ALB: $25/month
-- RDS Aurora (3 nodes): $200/month
-- ElastiCache Redis: $50/month
-- **Total: ~$455/month**
-
 ## Capacity Planning
 
 ### Current Capacity
@@ -255,20 +233,6 @@ this.executeJobAsync(job).catch(error => {
 ## Deployment Strategy
 
 ### Blue-Green Deployment
-```
-Production Traffic
-    │
-    ▼
-┌─────────┐
-│  Blue   │ ◄── Current Version
-│ (Live)  │
-└─────────┘
-
-┌─────────┐
-│  Green  │ ◄── New Version (Testing)
-│(Standby)│
-└─────────┘
-```
 
 **Process:**
 1. Deploy new version to Green
