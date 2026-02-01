@@ -62,7 +62,7 @@ Each module can be separated into individual services if needed.
 1. Deploy multiple NestJS instances
 2. Use NGINX/AWS ELB for load balancing
 3. PostgreSQL read replicas for read operations
-4. Redis for caching (optional)
+4. Redis for caching 
 
 **Code Changes Required:** None! ✅ (Stateless design)
 
