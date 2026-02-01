@@ -201,6 +201,9 @@ All API requests are validated using DTOs:
 - Schedule must be a valid string
 - Optional fields: description, isActive
 
+<img width="1920" height="1006" alt="image" src="https://github.com/user-attachments/assets/45dae63e-d1ca-4366-958d-3360f5178398" />
+
+
 ## 📈 Scalability
 
 The application is designed for scalability:
@@ -307,7 +310,7 @@ Each module can be separated into individual services if needed.
 1. Deploy multiple NestJS instances
 2. Use NGINX/AWS ELB for load balancing
 3. PostgreSQL read replicas for read operations
-4. Redis for caching (optional)
+4. Redis for caching 
 
 **Code Changes Required:** None! ✅ (Stateless design)
 
