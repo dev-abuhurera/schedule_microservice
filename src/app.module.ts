@@ -3,9 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { JobsModule } from './jobs/jobs.module';
 import { PrismaService } from './prisma.service';
+import { SchedularModule } from './scheduler/scheduler.module';
 
 @Module({
-  imports: [JobsModule],
+  imports: [JobsModule, SchedularModule],
   controllers: [AppController],
   providers: [AppService, PrismaService],
   exports: [PrismaService],
