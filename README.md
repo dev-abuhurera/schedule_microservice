@@ -2,7 +2,7 @@
 
 A production-ready job scheduler microservice built with NestJS, TypeScript, and PostgreSQL. This service allows scheduling and managing jobs with flexible configurations and automatic execution.
 
-## 🚀 Features
+## Features
 
 - **Job Scheduling**: Custom scheduler with cron expression support
 - **RESTful API**: Complete CRUD operations for job management
@@ -13,7 +13,7 @@ A production-ready job scheduler microservice built with NestJS, TypeScript, and
 - **API Documentation**: Interactive Swagger/OpenAPI documentation
 - **Scalable Architecture**: Designed for high-performance production use
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Language**: TypeScript
 - **Framework**: NestJS
@@ -23,13 +23,13 @@ A production-ready job scheduler microservice built with NestJS, TypeScript, and
 - **Documentation**: Swagger/OpenAPI
 - **Validation**: class-validator
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js (v18 or higher)
 - PostgreSQL (v16 or higher)
 - npm or yarn
 
-## 🔧 Installation
+## Installation
 
 1. **Clone the repository**
 ```bash
@@ -69,7 +69,7 @@ npx prisma migrate deploy
 npx prisma generate
 ```
 
-## 🚀 Running the Application
+## Running the Application
 
 ### Development Mode
 ```bash
@@ -92,7 +92,7 @@ Open your browser and navigate to:
 http://localhost:3000/api
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Run E2E Tests
 ```bash
@@ -115,7 +115,7 @@ npm run test
 npm run test:cov
 ```
 
-## 📡 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -148,7 +148,7 @@ curl -X POST http://localhost:3000/jobs \
 - `0 9 * * *` - Every day at 9 AM
 - `0 0 * * 0` - Every Sunday at midnight
 
-## 🏗️ Architecture
+## Architecture
 
 ### Project Structure
 ```
@@ -175,7 +175,7 @@ src/
 - **Strategy Pattern**: Different job implementations
 - **Module Pattern**: Feature organization
 
-## 📊 Database Schema
+## Database Schema
 ```prisma
 model Job {
   id          Int       @id @default(autoincrement())
@@ -192,7 +192,7 @@ model Job {
 }
 ```
 
-## ⚙️ How It Works
+## How It Works
 
 1. **Job Creation**: Users create jobs via REST API with cron schedules
 2. **Scheduler Service**: Runs every minute checking for jobs to execute
@@ -200,7 +200,7 @@ model Job {
 4. **Timestamp Updates**: Updates `lastRun` and calculates `nextRun`
 5. **Database Persistence**: All job data stored in PostgreSQL
 
-## 🔒 Validation
+## Validation
 
 All API requests are validated using DTOs:
 - Job name is required
@@ -209,7 +209,7 @@ All API requests are validated using DTOs:
 
 
 
-## 📈 Scalability
+## Scalability
 
 The application is designed for scalability:
 
@@ -221,7 +221,7 @@ The application is designed for scalability:
 
 ### Scaling to 10,000+ Users
 
-## 🧪 Testing Coverage
+## Testing Coverage
 
 <img width="1920" height="1006" alt="image" src="https://github.com/user-attachments/assets/b3f05d03-4643-4dc5-b8b5-2688b767ec31" />
 
